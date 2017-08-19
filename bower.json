@@ -1,0 +1,19 @@
+{
+  "name": "wish-list",
+  "description": "Wish List App",
+  "main": "server.js",
+  "authors": [
+    "Neethu"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-route": "^1.6.3",
+    "bootstrap": "^3.3.7",
+    "bootstrap-social": "^5.1.1",
+    "angular-animate": "^1.6.3",
+    "angular-sanitize": "^1.6.3"
+  }
+}

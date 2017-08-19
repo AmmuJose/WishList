@@ -1,0 +1,29 @@
+<div ng-controller="AddWishListController">
+    <div class="col-md-12">
+        <h3>Add Your List</h3>
+        <div id="wish-list-form">
+            <form>
+                <div class="form-group">
+                    <label for="title">List Title:</label>
+                    <input type="text" placeholder="Title" ng-model="title" class="form-control" id="title">
+                </div>
+                <div>
+                    <ul>
+                        <li ng-repeat="itemObj in items">
+                            <span ng-click="removeItem($index)" class="remove">&times;</span> {{itemObj.name}} - <a href="{{itemObj.description}}" target="_blank"> View it </a>
+                        </li>
+                    </ul>
+                    <div class="form-group">
+                        <label for="title">List Items Name and Description</label>
+                        <input class="form-control" ng-model="item.name" placeholder="Name of the Item">
+                    </div>
+                    <input class="form-control" ng-model="item.description" placeholder="Item Description/URL">
+                    <br>
+                    <p class="text-danger">{{errortext}}</p>
+                    <button type="button" class="btn btn-sm btn-primary" ng-click="addItem()"> <span class="sub_icon glyphicon glyphicon-plus-sign"></span> Add</button>
+                    <button type="button" class="btn btn-sm btn-primary" ng-click="createWishList()"> Save </button>
+                </div>                
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="WishList" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wish List</title>
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style1.css">
+    <!-- Scripts -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    <script src="modules/AddWishList/AddWishListService.js"></script>
+    <script src="modules/AddWishList/AddWishListController.js"></script>
+    <script src="modules/MyWishList/MyWishListService.js"></script>
+    <script src="modules/MyWishList/MyWishListController.js"></script>
+    <script src="modules/Home/HomeController.js"></script>
+    <script src="modules/SharedWishList/SharedWishListController.js"></script>
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+        <!-- content -->
+        <div class="row head">
+            <div class="col-md-12">
+                <h1>Wish List</h1>
+            </div>
+        </div>
+        <nav class="navbar navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>              
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/add-wish-list"><span class="sub_icon glyphicon glyphicon-plus-sign"></span> Add List </a></li>
+                    <li><a href="#/my-wish-list"><span class="sub_icon glyphicon glyphicon-th-list"></span> My Lists</a></li>
+                    <li><a href="#/shared-by-others"><span class="sub_icon glyphicon glyphicon-link"></span> Shared By Others</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div>
+            <div class="row">
+                <div ng-view class="view"></div>
+            </div>
+            <br>
+            <div class="row footer">
+                <div class="col-md-12">
+                    <footer>
+                        &copy; Copyright 2017 Neethu Jose
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+</body>
+</body>
+
+</html>

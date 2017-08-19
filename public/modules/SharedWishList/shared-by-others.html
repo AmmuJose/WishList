@@ -1,0 +1,16 @@
+<div ng-controller="SharedWishListController">
+    <div class="col-md-12">
+        <h3>Lists Shared By Others</h3>
+         <div ng-if="lists.length === 0" class="ngshow"> No items in this list yet! </div>
+        <ul ng-repeat="list in lists">           
+            <li ng-click="expand = !expand" class="my-list-title">{{$index + 1}}) {{list.title}}</li>
+            <li ng-show="expand" >
+                <input type="hidden" name="listId" value='{{list._id}}' />
+                <span class="list-items"> List Items:</span>
+                <ul ng-repeat="item in list.items" class="items">
+                    <li>{{item.name}} <a href="{{item.description}}" target="_blank">View Item</a></li>
+                </ul>
+                <span class="list-items"> Shared By:</span> {{list.owner.name}}, {{list.owner.email}}
+        </ul>
+    </div>
+</div>

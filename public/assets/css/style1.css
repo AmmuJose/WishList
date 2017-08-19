@@ -1,0 +1,134 @@
+body {
+    color: #000;
+}
+
+img {
+    margin-top: 25px;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+h3{
+    font-size: 22px;    
+}
+
+h3,
+.ngshow{
+    text-align: center;   
+}
+
+.view{
+    min-height: 150px;
+}
+
+h1,
+h3,
+h4 {
+    font-weight: bold;
+}
+.navbar-inverse .navbar-toggle{
+    border-color: #eee;
+}
+
+h4 {
+    font-size: 20px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px #888;
+}
+
+.desc {
+    margin: 20px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.signin {
+     margin: 10px 20px;
+     font-weight: bold;
+     font-size: 18px;
+}
+
+footer {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 11px;
+    clear: both;
+}
+.navbar-inverse{
+    background-color: #77a8f5;
+    border-color: #77a8f5;
+    border-bottom: 1px solid #6697e4;
+    margin:0px -15px; 
+}
+
+.navbar-inverse .navbar-nav>li>a{
+    color: #222;
+}
+
+.container {
+    background-color: #eee;
+    border-radius: 1.5em;
+}
+.my-list-title{
+    font-weight: bold;
+    color: #182d67;
+}
+
+.list-items{
+    margin:15px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size:13px;
+}
+
+.items li {
+    list-style-type: disc; 
+}
+
+.emails{
+    margin: 15px;
+}
+
+.error-msg{
+    margin:10px 2px;
+}
+.remove{
+    font-weight: bolder;
+    color:red;
+    font-size: 19px;
+}
+
+.border-top-radius {
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+}
+
+.border-bottom-radius {
+    border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+}
+.head,
+.footer {
+    background-color: #3364b0;
+}
+
+#wish-list-form, .view{
+    width:95%;
+    margin: auto;
+}
+
+
+
+/* media query */
+@media (min-width: 1200px) {
+  .view {
+    width: 80%;
+   }
+}

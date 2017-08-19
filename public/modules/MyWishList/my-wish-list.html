@@ -1,0 +1,29 @@
+<div ng-controller="MyWishListController">
+    <div class="col-md-12">
+        <h3>My Lists</h3>
+        <div ng-if="lists.length === 0" class="ngshow"> No items in this list yet! </div>
+        <ul ng-repeat="list in lists">
+            <li ng-click="expand = !expand" class="my-list-title">{{$index + 1}}) {{list.title}}</li>
+            <li ng-show="expand" >
+                <input type="hidden" name="listId" value='{{list._id}}' />
+                 <span class="list-items"> List Items:</span>
+                <ul ng-repeat="item in list.items" class="items">
+                    <li>{{item.name}} <a href="{{item.description}}" target="_blank">View Item</a></li>
+                </ul>
+                <span class="list-items"> Shared With:</span>
+                <ul ng-repeat="email in list.shared_with" class="items">
+                    <li>{{email}}</li>
+                </ul>
+                <ul>
+                    <li ng-repeat="email in emails[list._id]">
+                        <span ng-click="removeItem($index, list._id)" class="remove">&times;</span> {{email}}
+                    </li>                    
+                </ul>
+                
+                <div class="text-danger error-msg">{{errortext[list._id]}}</div>
+                <input ng-model='lists[list._id]'>
+                <button type="button" class="btn-primary" ng-click='addEmail()'>Add</button>
+                <button ng-click="sendMail(list._id)" class="btn-primary">Share</button>
+        </ul>
+    </div>
+</div>
